@@ -16,15 +16,17 @@ db = SQLAlchemy()
 # create the app
 app = Flask(__name__)
 # configure the SQLite database, relative to the app instance folder
-app.config["SQLALCHEMY_DATABASE_URI"] = "mysql://root:123456@127.0.0.1:3306/mysql"
+app.config["SQLALCHEMY_DATABASE_URI"] = "mysql://root:123456@127.0.0.1:3306/food_db"
 # initialize the app with the extension
 db = SQLAlchemy(app)
+app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = True
 
 
 @app.route('/api/hello')
 def hello():
     from sqlalchemy import text
-    sql = text("SELECT * FROM user")
+    # sql = text("SELECT * FROM user")
+    sql = text("SHOW FULL TABLES FROM `Engine(mysql+cymysql://root:***@localhost:3306/food_db)`")
     result = db.engine.connect().execute(sql)
     for row in result:
         app.logger.info(row)

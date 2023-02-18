@@ -2,3 +2,8 @@ flask
 flask-sqlalchemy
 mysqlclient
 flask_script
+requests
+flask-debugtoolbar
+
+
+

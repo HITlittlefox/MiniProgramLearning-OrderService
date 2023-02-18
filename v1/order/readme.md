@@ -1,7 +1,12 @@
 Python Flask订餐系统
 =====================
 ##启动
-* export ops_config=local|production && python manage.py runserver
+
+* export ops_config=local|production && python manager.py runserver
+
+## 本地开发环境
+
+* export ops_config=local && python manager.py runserver
 
 ##flask-sqlacodegen
 
