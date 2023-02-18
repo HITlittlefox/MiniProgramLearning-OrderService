@@ -33,8 +33,8 @@ STATUS_MAPPING = {
 }
 # 小程序
 MINA_APP = {
-    'appid': 'wxd47addbb7d257b3c',
-    'appkey': 'c4fbacc50efa192eb805faaea43ddc2b',
+    'appid': '***',
+    'appkey': '***',
     # 'paykey': 'xxxxxxxxxxxxxx换自己的',
     # 'mch_id': 'xxxxxxxxxxxx换自己的',
     'callback_url': '/api/order/callback'
